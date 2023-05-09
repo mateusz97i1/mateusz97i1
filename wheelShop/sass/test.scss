@@ -1,0 +1,96 @@
+
+.fourImages{
+
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    filter: blur(5px);
+    transform: translateX(-100%);
+
+
+
+
+    @mixin imgBoxSize{
+        height: 450px;
+        width: 350px;
+        background-repeat: no-repeat;
+        text-align: center;
+        p{
+            font-size: 1.2rem;
+            padding-top: 350px
+        }
+    }
+
+    .img1{
+        @include imgBoxSize();
+        background-image: url(../static/urus1.PNG);
+        
+        
+    }
+
+    .img2{
+        @include imgBoxSize();
+        background-image: url(../static/urus2.PNG);
+        
+        transition-delay: 200ms;
+    }
+
+    .img3{
+        @include imgBoxSize();
+        background-image: url(../static/uru3.PNG);
+
+    }
+
+    .img4{
+        @include imgBoxSize();
+        background-image: url(../static/urus4.PNG);
+
+      
+    }
+
+
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+    transform: translateX(0);
+}
+.show:nth-child(1){
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+    transform: translateX(0);
+    transition-delay: 100ms;
+}
+
+.show:nth-child(2){
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+    transform: translateX(0);
+    transition-delay: 200ms;
+}
+
+.show:nth-child(3){
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+    transform: translateX(0);
+    transition-delay: 300ms;
+}
+
+.show:nth-child(4){
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+    transform: translateX(0);
+    transition-delay: 400ms;
+}

@@ -1,0 +1,28 @@
+{% extends 'mainHero.html'%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body >
+    {% block mainWheelSite %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <h1><em>About us</em> </h1>
+    <hr>
+    <div class="aboutDescriptiono"> 
+        <p>WheelsShop is a company based in Poland that specializes in the production and installation of wheels.</p>
+        <p>With years of experience in the industry, we are committed to providing high-quality wheels that meet the needs of our customers.</p>
+        <p>Our range of products includes alloy wheels, steel wheels, and custom-made wheels that can be tailored to your specific requirements.</p>
+        <p>In addition to our production services, we also offer wheel installation, balancing, and alignment services to ensure that your wheels perform at their best.</p>
+        <p>At WheelsShop, we believe in providing exceptional customer service and building lasting relationships with our clients. We are dedicated to ensuring your complete satisfaction with our products and services.</p>
+        <p>Contact us today to learn more about how we can help you with your wheel needs!</p>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

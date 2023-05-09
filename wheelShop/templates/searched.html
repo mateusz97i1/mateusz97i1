@@ -1,0 +1,57 @@
+{% extends 'mainHero.html'%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body >
+    {% block mainWheelSite %}
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+    <link rel="stylesheet" href="{% static 'parts.css' %}">
+
+        <hr>
+        <div class="searchResults">
+              {% if parts %}
+           {% for part in parts %}
+        {% if forloop.counter0|divisibleby:3 %}
+         
+          <section class="offerWheels">
+        {% endif %}
+        <div class="offerBlok">
+            
+            <img src="{{ part.image }}" alt="">
+            <p>{{ part.name }} {{ part.size }}"" </p>
+            <p> <em>price</em>  {{ part.price }}$</p>
+            <p>Only {{ part.leftOnStock }} left</p>
+            <form action="{% url 'wheelShop:add_to_cart' part.id %}" method="post">
+              {% csrf_token %}
+              <input class="buyBtn" type="submit" value="BUY" >
+              <div>
+                <select class="amount" name="amount">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </form>
+            
+               
+        </div>
+      {% endfor %}
+        
+        {% else %}
+            <p id="p00">Nothing has been found, make sure that you typed everything correctly</p>
+        {% endif %}
+        </div>
+
+        <script src="{% static 'parts.js' %}"></script>
+    {% endblock %}
+    
+</body>
+</html>

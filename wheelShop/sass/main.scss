@@ -1,0 +1,901 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.searchBarAppear{
+    display: flex;
+
+}
+
+
+.searchBar{
+    
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    z-index: 1100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1200;
+    border: 1.5px solid black;
+
+
+
+    .form1{
+        position: relative;
+        width: 50%;
+
+
+
+    #closeBtn{
+                height: 35px;
+                width: 35px;
+                background-image: url(../static/closebtn.PNG);
+                background-repeat: no-repeat;
+                position: absolute;
+                right: 0;
+                margin-top: 50px;
+                z-index: 1200;
+                cursor: pointer ;
+                transition: all 1s;
+            
+            }
+
+        .box0{
+            display: flex;
+            flex-direction: row;
+
+        
+
+             .input1{
+            margin-top: 50px;
+            width: 70%;
+            height: 30px;
+            background-color: aliceblue;
+            border: black 1px solid;
+            border-radius: 30px;
+            z-index: 1200;
+            }
+
+            button{
+                margin-top: 50px;
+                height: 30px;
+                background-color: black;
+                color: aliceblue;
+                
+                border-radius: 30px;
+            }
+
+            button:hover{
+                border: 1px solid black;
+                background-color: aliceblue;
+                color: black;
+                cursor: pointer;
+            }
+
+ 
+
+        }
+       
+
+        h4{
+            text-align: start;
+            cursor: default;
+
+        }
+
+        ul{
+            list-style-type: none;
+            text-align: start;
+            padding-left: 0;
+
+            li{
+                padding-bottom: 3px;
+            }
+            li:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+
+
+    }
+
+
+}
+
+
+
+header{
+
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid black 0.5px;
+
+        .box1{
+            padding-left: 60px;
+            width: 350px;
+
+        }
+
+        .box2{
+            width: 30vw;
+            height: 25px;
+            
+            background-color: black;
+            text-align: center;
+            padding-top: 5px;
+            border-radius: 30px;
+
+            a{
+                text-decoration: none;
+                color: aliceblue;
+                text-decoration: underline;
+            }
+        }
+
+        .box3{
+            padding-right: 60px;
+            width: 350px;
+            text-align: end;
+        }
+
+}
+
+.sectionHead{
+
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .box4{
+        width: 480px;
+        height: 30px;
+        display: flex;
+        justify-content: flex-start;
+
+        .logo-image{
+            width: 100px;
+            height: 20px;
+            background-image: url(../static/Logo.png);
+            margin-left: 60px;
+        }
+
+        .home{
+            text-decoration: none;
+            margin-left: 50px;
+        }
+
+        .home:hover{
+            padding-right: 10px;
+            padding-left: 10px;
+            height: 25px;
+            background-color: black;
+            color: aliceblue;
+            border: 1px aliceblue solid;
+            border-radius: 30px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .menuBarParts{
+            text-decoration: none;
+            margin-left: 50px;
+            color: black;
+        }
+
+        .menuBarParts:hover{
+            text-align: center;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-color: black;
+            color: aliceblue;
+            border: 1px aliceblue solid;
+            border-radius: 30px;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        .menuBarAbout{
+            text-decoration: none;
+            margin-left: 50px;
+            color: black;
+        }
+
+        .menuBarAbout:hover{
+            text-align: center;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-color: black;
+            color: aliceblue;
+            border: 1px aliceblue solid;
+            border-radius: 30px;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+    }
+
+    
+    h1{
+        width: 300px;
+        font-size: 2rem;
+        cursor: pointer;
+        text-align: center;
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+    }
+
+    .box5{
+        width: 480px;
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+
+         .box6{
+            height: 30px;
+            width: 30px;
+            background-image: url(../static/loupe.PNG);
+            background-repeat: no-repeat;
+            z-index: 1010;
+            cursor: pointer;
+            margin-right: 30px;
+            position: relative;
+            top: 3px;
+            margin-top: 1px;
+
+            }
+
+        .box7{
+            height: 30px;
+            width: 30px;
+            background-image: url(../static/account.PNG);
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 1020;
+            margin-right: 60px;
+
+
+            
+            }
+
+            .box9{
+                height: 27px;
+                width: 27px;
+                background-image: url(../static/cart.jpg);
+                background-repeat: no-repeat;
+                cursor: pointer;
+                z-index: 1020;
+                margin-right: 60px;
+                right: 65px;
+                margin-top: 2px;
+                
+                position: absolute;
+                
+                }
+
+        .box8{
+            height: 30px;
+            width: 40px;
+            background-image: url(../static/logout.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 1530;
+            margin-right: 60px;
+            margin-top: 1px;
+            
+            
+
+
+            
+            }
+
+    }
+
+   
+
+
+}
+
+
+.partsBar{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1550;    
+    flex-direction: row;
+    background-color: #fff;
+    
+
+    .partsBox1{
+
+        width: 12%;
+        height: 250px;
+        margin-left: 60px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+       
+
+        #boxid0{
+             width: 100%;
+            height: 1px;
+            background-color: black;
+
+        }
+
+        #boxid1{
+
+           padding-top: 15px;
+
+            #boxid1-a{ 
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                
+                
+            }
+            
+            #boxid1-a:hover{
+                text-decoration: underline;
+            }
+            
+
+        }
+
+
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+            font-size: .9rem;
+            padding-bottom: 5px;
+
+            li{
+                padding-bottom: 3px;
+            }
+        }
+
+
+    }
+
+}
+
+.aboutBar{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1550;    
+    flex-direction: row;
+    background-color: #fff;
+
+    .partsBox1{
+
+        width: 12%;
+        height: 250px;
+        margin-left: 60px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+       
+
+        #boxid0{
+             width: 100%;
+            height: 1px;
+            background-color: black;
+
+        }
+
+        #boxid1{
+
+           padding-top: 15px;
+
+
+           #boxid1-a{ 
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            
+            
+            }
+        
+            #boxid1-a:hover{
+                text-decoration: underline;
+            }
+
+        }
+
+
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+            font-size: .9rem;
+            padding-bottom: 5px;
+
+            li{
+                padding-bottom: 3px;
+            }
+        }
+
+    }
+}
+
+
+.sectionImg{
+    position: relative;
+    background-image: url(../static/porsheBgc.PNG);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 850px;
+    padding-bottom: 80px;
+    z-index: 400;
+
+    .description1{
+    width: 400px;
+    height: 300px;
+    padding-left: 60px;
+    position: relative;
+    top: 500px;
+    text-shadow: 2px 2px 4px black;
+    animation: descriptionMove 1s 0.5s forwards;
+
+
+
+        h2{
+            font-size: 2.3rem;
+            color: aliceblue;
+        }
+
+        p{
+            color: aliceblue;
+            padding-bottom: 10px;
+        }
+
+        a{
+            width: 300px;
+            height: 30px;
+            background-color: silver;
+            border: aliceblue solid 1px;
+            border-radius: 30px;
+            text-decoration: none;
+            padding: 10px 10px ;
+            font-size: 1rem;
+            color: aliceblue;
+            z-index: 1100;
+            padding-top: 5px;
+         }
+      
+    }
+
+}
+
+
+
+@keyframes descriptionMove{
+    from{
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+    }
+
+    to{
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0);
+    }
+}
+
+h3{
+    font-size: 2rem;
+    position: absolute;
+    left: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.offer1{
+    width: 100%;
+    height: 700px;
+    text-shadow: 1px 1px 1px black;
+    
+
+    h3{
+        font-size: 2rem;
+        position: absolute;
+        left: 60px;
+    }
+
+
+    .fourImages{
+
+        width: 100%;
+        height: 400px;
+        background-color: #fff;
+        display: flex;
+        padding-top: 30px;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        filter: blur(5px);
+        transform: translateX(-100%);
+
+
+
+
+        @mixin imgBoxSize{
+            height: 450px;
+            width: 350px;
+            background-repeat: no-repeat;
+            text-align: center;
+            
+            p{
+                font-size: 1.2rem;
+                padding-top: 350px
+            }
+        }
+
+        .img1{
+            @include imgBoxSize();
+            background-image: url(../static/urus1.PNG);
+           
+            
+            
+        }
+
+        .img2{
+            @include imgBoxSize();
+            background-image: url(../static/urus2.PNG);
+            
+            transition-delay: 100ms
+        }
+
+        .img3{
+            @include imgBoxSize();
+            background-image: url(../static/uru3.PNG);
+            transition-delay: 200ms
+        }
+
+        .img4{
+            @include imgBoxSize();
+            background-image: url(../static/urus4.PNG);
+            transition-delay: 300ms
+          
+        }
+    
+
+    }
+
+    .show{
+        opacity: 1;
+        filter: blur(0px);
+        transition: all 1s;
+        transform: translateX(0);
+    }
+    
+
+    
+    .description2{
+        margin-top: 100px;
+        width: 600px;
+        justify-content: flex-start;
+        font-size: 1.5rem;
+        padding-left: 60px;
+    }
+
+
+}
+
+footer{
+    z-index: 1900;
+    background-color: black;
+    padding-bottom: 10px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    right: 0;
+    
+
+    p{
+        margin-right: 60px;
+         text-align: end;
+         color: aliceblue;
+    }
+   
+    
+
+}
+
+
+
+
+
+
+@media only screen and (max-width:768px) {
+    
+
+    header{
+        
+        justify-content: center;
+
+            .box1{
+                display: none;
+    
+            }
+    
+            .box2{
+                width: 80%;
+                font-size: 0.9rem;
+
+            }
+    
+            .box3{
+                display: none;
+            }
+    
+    }
+
+    .sectionHead{
+
+    display: block;
+    flex-wrap: wrap;
+    
+    
+    
+        .box4{
+            position: relative;
+            top: 100px;
+            margin: auto;
+            width: auto;
+            justify-content: center;
+          
+
+            .home{
+                
+                margin-left: 0px;
+            }
+            
+
+            .logo-image{
+                display: none;
+            }
+    
+    
+        }
+    
+        
+        h1{
+            display: flex;
+            width:300px ;
+            margin: auto;
+            justify-content: center;
+            
+    
+            a{
+                text-decoration: none;
+                color: black;
+            }
+    
+        }
+    
+        .box5{
+            display: none;
+    
+        }
+    
+    
+    }
+
+
+    .sectionImg{
+
+        height: 550px;
+
+        .description1{
+
+            top: 350px;
+            padding-left: 20px;
+            width: 300px;
+
+    
+            h2{
+                font-size: 2rem;
+            }
+    
+    
+        }
+    
+    }
+
+    h3{
+
+        font-size: 1.6rem;
+        left: 20px;
+        margin-top: 10px;
+
+    }
+
+    .offer1{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top:600px;
+        
+    
+        h3{
+            font-size: 2rem;
+            position: absolute;
+            left: 60px;
+        }
+    
+    
+        .fourImages{
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+    
+        @mixin imgBoxSize{
+            height: 450px;
+            width: 350px;
+            margin-bottom: 20px;
+            p{
+                font-size: 1.2rem;
+                padding-top: 350px
+            }
+    
+        }
+
+        .description2{
+        margin-top: 100px;
+        width: 300px;
+        justify-content: flex-start;
+        font-size: 1rem;
+        padding-left: 20px;
+        position: relative;
+        top: 570px;
+        }
+
+
+
+    }
+
+    
+    footer{
+        position: relative;
+        bottom: -1200px   ;
+       
+    }
+
+
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+
+    header{
+        
+        justify-content: center;
+
+            .box1{
+                display: none;
+    
+            }
+    
+            .box2{
+                width: 80%;
+                font-size: 0.9rem;
+
+            }
+    
+            .box3{
+                display: none;
+            }
+    
+    }
+
+    .sectionHead{
+
+    
+        .box4{
+            width: 480px;
+            height: 30px;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            top: 60px;
+    
+            
+        }
+    
+        
+        h1{
+            position: absolute;  
+            top: 100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 300px;
+
+        }
+    
+        .box5{
+            position: relative;
+            top: 52px;
+    
+    
+        }
+
+    
+    }
+
+    .offer1{
+        width: 100%;
+        height: auto;
+        
+    
+        h3{
+            font-size: 2rem;
+            position: absolute;
+            left: 60px;
+        }
+    
+    
+        .fourImages{
+            
+            justify-content: space-evenly;
+
+            .img1{
+                width: 200px;
+                height: 300px;
+     
+                
+            }
+    
+            .img2{
+                width: 200px;
+                height: 300px;
+            }
+    
+            .img3{
+                width: 200px;
+                height: 300px;
+            }
+    
+            .img4{
+                width: 200px;
+                height: 300px;
+              
+            }
+            
+        }
+    
+    }
+
+}

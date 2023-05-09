@@ -1,0 +1,194 @@
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>WheelShop</title>
+</head>
+<body>
+    
+    <section class="searchBar">
+        
+        <form class="form1" method="get" action="{% url 'wheelShop:searched' %}">
+            {% csrf_token %}
+            <div id="closeBtn"></div>
+
+            <div class="box0">
+                <input placeholder="..." class="input1" type="text" name="searchMain" id="">
+                <button type="submit">SEARCH</button>
+                
+            </div>
+            <H4>EXPLORE</H4> 
+            <ul>
+                <li>WHEELS</li>
+                <li>FRONT BUMPERS</li>
+                <li>REAR BUMPERS</li>
+                <li>ACCESORIES</li>
+            </ul>
+            
+        </form>
+
+    </section>
+
+
+
+    <header>
+        <div class="box1">WHEELS  ALLOVER  THE  WORLD</div>
+        <div class="box2"><a href="{% url 'wheelShop:partsy' %}">EXPLORE OUR NEW COLLECTION</a> </div>
+        <div class="box3">POLAND  {{ current_time }}</div>
+    </header>
+    
+    <section class="sectionHead">
+        <div class="box4">
+            <div class="logo-image" ></div>
+            <a href="{% url 'wheelShop:main' %}" class="logo"></a>
+            <a href="{% url 'wheelShop:main'%}" class="home" >HOME</a>
+            <a href="{% url 'wheelShop:partsy'%}" class="menuBarParts">PARTS</a>
+            <a href="{% url 'wheelShop:abouty'%}" class="menuBarAbout">ABOUT</a>
+        </div>
+        
+        <h1> <a href="{% url 'wheelShop:main'%}">W H E E L S H O P</a> </h1>
+        <div class="box5">
+            <div class="box6"></div>
+            
+            
+            {% if user.is_authenticated %}
+            <a class="box7" href="{% url 'wheelShop:profile'%}"> </a>
+            <a class="box9" href="{% url 'wheelShop:shoppingBasket'%}"></a>
+            <a class="box8" href="/logout"></a> 
+            {% else %}
+            <a class="box7" href="/login/auth0"> </a>
+            {% endif %}
+                
+        </div>
+        
+    </section>
+
+    
+    <section class="partsBar">
+
+        <div class="partsBox1">
+            <div id="boxid0"></div>
+            <div id="boxid1"><a id="boxid1-a" href="{% url 'wheelShop:partsy' %}">WHEELS</a></div>
+            <div id="boxid2">
+                
+                <ul>
+                    <li>18"</li>
+                    <li>19"</li>
+                    <li>20"</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="partsBox1">
+            <div id="boxid0"></div>
+            <div id="boxid1"><a id="boxid1-a" href="#">FRONT BUMPERS</a></div>
+            <div id="boxid2">
+               
+                <ul>
+                    <li>BBS</li>
+                    <li>Akrapovic</li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="partsBox1">
+            <div id="boxid0"></div>
+            <div id="boxid1"><a id="boxid1-a" href="#">REAR BUMPERS</a></div>
+            <div id="boxid2">
+                
+                <ul>
+                    <li>BBS</li>
+                    <li>Akrapovic</li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="partsBox1">
+            <div id="boxid0"></div>
+            <div id="boxid1"><a id="boxid1-a" href="#">ACCESORIES</a></div>
+            <div id="boxid2">
+                
+                <ul>
+                    <li>Fridge Magnets</li>
+                    <li>T-shirts</li>
+                </ul>
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="aboutBar">
+
+        <div class="partsBox1">
+            <div id="boxid0"></div>
+            <div id="boxid1"><a id="boxid1-a" href="{% url 'wheelShop:abouty'%}">ABOUT</a></div>
+            <div id="boxid2">
+                
+                <ul>
+                    <li>Call US</li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+{% block mainWheelSite %}
+{% csrf_token %}
+    <section class="sectionImg">
+        <div class="description1">
+            <h2>Summer is coming!</h2>
+            <p>Welcome to a new sezon: our summer collection features
+            are ready to explore.</p>
+            <a href="{% url 'wheelShop:partsy'%}">EXPLORE NEW SUMMER COLLECTION</a>           
+        </div>
+    </section>
+
+    <hr>
+    
+    <h3>New Wheel styles for summer</h3>
+
+    <section class="offer1">
+        
+        <div class="fourImages">
+            <div class="img1">
+                <p>Available from 20-26"</p>
+            </div>
+            <div class="img2">
+                <p>1 Piece, 2 Piece or 3 Piece Configuration.</p>
+            </div>
+            <div class="img3">
+                <p>Regular or Floating Center Cap</p>
+            </div>
+            <div class="img4">
+                <p>Any Surface Finish / Color Combinations possible</p>
+            </div>
+        </div>
+       
+        <div class="description2">
+             <hr>
+            <p>Pricing is determined per customer request.</p>  
+            <p>Starting from $10,000 USD</p>
+        </div>
+
+    </section>
+{% endblock %}  
+    <footer>
+        <div id="line"></div>
+        <p>©Copyright 2023 by Mateusz</p>
+    </footer>
+
+    <script defer src="{% static 'main.js'%}"></script>
+    <script  src="{% static 'searchBar.js'%}"></script>
+</body>
+</html>

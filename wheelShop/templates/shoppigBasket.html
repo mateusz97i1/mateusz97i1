@@ -1,0 +1,72 @@
+{% extends 'mainHero.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy</title>
+</head>
+<body>
+    
+    {% block mainWheelSite %}
+    <link rel="stylesheet" href="{% static 'cart.css'%}">
+    {% csrf_token %}
+    <h1>Cart:</h1>
+    <hr>
+        <div class="cart-tabl">
+            
+            <table>
+                <tr>
+                    <th>ITEM</th>
+                    <th>NAME</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th><em>Click to remove</em> </th>
+                    
+                </tr>
+            </table>
+            {% for wheel_item in wheel_items %}
+            <table>
+                <tr>
+                    <td><img width="100px" src="{{ wheel_item.image }}" class="img-fluid rounded-start" alt="{{ wheel_item.name }}"></td>
+                    <td>{{ wheel_item.name }}</td>
+                    <td>{{ wheel_item.price }}</td>
+                    <td>{{ wheel_item.quantity }}</td>
+                    <td>
+                        <form action="{% url 'wheelShop:remove_from_cart' wheel_id=wheel_item.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="wheel_id" value="{{ wheel_item.id }}">
+                            <input class="cc-btn" type="submit" value="Remove">
+                    </td>
+                </tr>
+               
+            </form>
+            </table>
+            
+            {% endfor %}
+        </div>
+
+        <form class="card-clear-all" action="{% url 'wheelShop:shoppingBasket' %}" method="post">
+            {% csrf_token %}
+            <input class="cc-btn" type="submit" value="Clear Cart" >
+        </form>
+            <h5 class="card-title">Order Summary:</h5>
+            <p class="card-title">Total: ${{ total }}</p>
+            <div class="check">
+                <form method="post" name="checkOutBtn" action="{% url 'wheelShop:checkout'%}">
+                    {% csrf_token %}
+                    <button type="submit"  >Checkout</button>
+                </form>
+                
+
+            </div>
+            
+            <hr>
+
+            
+
+    {% endblock mainWheelSite %}
+        
+</body>
+</html>

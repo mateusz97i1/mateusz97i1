@@ -1,0 +1,51 @@
+{% extends 'mainHero.html'%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts</title>
+</head>
+<body>
+    
+    {% block mainWheelSite %}
+    
+    <link rel="stylesheet" href="{% static 'parts.css' %}">
+    <h2>CHECK  THE <em>1-PIECE/  2-PIECE/  3-PIECE </em>  HIGH  QUALITY  WHEELS</h2>
+    <hr>
+    {% for wheel in wheels %}
+    {% if forloop.counter0|divisibleby:3 %}
+      </section>
+      <section class="offerWheels">
+    {% endif %}
+    <div class="offerBlok">
+        
+        <img src="{{ wheel.image }}" alt="">
+        <p>{{ wheel.name }} {{ wheel.size }}"" </p>
+        <p> <em>price</em>  {{ wheel.price }}$</p>
+        <p>Only {{ wheel.leftOnStock }} left</p>
+        <form action="{% url 'wheelShop:add_to_cart' wheel.id %}" method="post">
+          {% csrf_token %}
+          <input class="buyBtn" type="submit" value="BUY" >
+          <div>
+            <select class="amount" name="amount">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </form>
+        
+           
+    </div>
+  {% endfor %}
+  </section>
+    <script src="{% static 'parts.js' %}"></script>
+    {% endblock %}
+    
+</body>
+</html>

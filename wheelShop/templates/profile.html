@@ -1,0 +1,28 @@
+{% extends 'mainHero.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    
+    {% block mainWheelSite %}
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+    <h1>{{name}} Profile</h1>
+    <div class="searchResults">
+          <hr>
+        <img src="{{auth0_user.extra_data.picture}}" alt="Profile image" width="50px">
+        
+       <p> {{user_data}} </p> 
+    </div>
+
+            
+        
+    {% endblock mainWheelSite %}
+        
+</body>
+</html>
