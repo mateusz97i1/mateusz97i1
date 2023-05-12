@@ -12,9 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
-load_dotenv()
-
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,9 +45,9 @@ INSTALLED_APPS = [
 ]
 
 SOCIAL_AUTH_TRAILING_SLASH=False
-SOCIAL_AUTH_AUTH0_DOMAIN=os.getenv('APP_DOMAIN')
-SOCIAL_AUTH_AUTH0_KEY=os.getenv('APP_CLIENT_ID')
-SOCIAL_AUTH_AUTH0_SECRET=os.getenv('APP_CLIENT_SECRET')
+SOCIAL_AUTH_AUTH0_DOMAIN=config('APP_DOMAIN')
+SOCIAL_AUTH_AUTH0_KEY=config('APP_CLIENT_ID')
+SOCIAL_AUTH_AUTH0_SECRET=config('APP_CLIENT_SECRET')
 SOCIAL_AUTH_URL_NAMESPACE = "wheelShop:social"
 
 
@@ -163,5 +161,5 @@ LOGIN_REDIRECT_URL='/'
 LOGOUT_REDIRECT_URL='/'
 
 #stripe settings
-STRIPE_PUBLIC_KEY=os.getenv('STRIPE_PUBLIC_KEY')
-STRIPE_SECRET_KEY=os.getenv('STRIPE_SECRET_KEY')
+STRIPE_PUBLIC_KEY=config('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY=config('STRIPE_SECRET_KEY')
