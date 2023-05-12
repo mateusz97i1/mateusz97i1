@@ -14,10 +14,8 @@ from django.conf import settings
 import stripe
 from django.urls import reverse, reverse_lazy
 import os
-
+from decouple import config
 register = template.Library()
-# from dotenv import load_dotenv
-# load_dotenv()
 
 
 
@@ -69,8 +67,8 @@ class LogoutView(View):
     def get(self, request):
         django_logout(request)
 
-        domain=os.getenv('APP_DOMAIN')
-        client_id=os.getenv('APP_CLIENT_ID')
+        domain=config('APP_DOMAIN')
+        client_id=config('APP_CLIENT_ID')
         return_to='http://localhost:8000/'
 
         return HttpResponseRedirect(f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}")
@@ -163,7 +161,7 @@ def payment_cancelled(request):
 
 
 #Takes stripe secret key from setting.py
-stripe.api_key=os.getenv('STRIPE_SECRET_KEY')
+stripe.api_key=config('STRIPE_SECRET_KEY')
 
 # @login_required
 def checkout(request):
