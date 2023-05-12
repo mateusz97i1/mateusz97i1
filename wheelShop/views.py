@@ -16,8 +16,8 @@ from django.urls import reverse, reverse_lazy
 import os
 
 register = template.Library()
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 
 
