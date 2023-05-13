@@ -16,14 +16,6 @@ filelock==3.9.0
 fonttools==4.38.0
 future==0.18.2
 idna==3.4
-Kivy==2.2.0.dev0
-kivy-deps.angle==0.3.3
-kivy-deps.glew==0.3.1
-kivy-deps.sdl2==0.5.1
-kivy-deps.sdl2-dev @ file:///C:/Users/Mateusz/kivy_deps.sdl2_dev-0.5.1-cp311-cp311-win_amd64.whl
-Kivy-examples==2.2.0.dev0
-Kivy-Garden==0.1.5
-kiwisolver==1.4.4
 matplotlib==3.6.3
 numpy==1.24.1
 oauthlib==3.2.2
