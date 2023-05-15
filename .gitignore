@@ -1,0 +1,17 @@
+# Pliki i foldery wygenerowane przez środowisko Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Środowisko wirtualne
+venv/
+env/
+
+# Pliki środowiskowe
+.env
+
+# Inne pliki i foldery
+*.log
+*.swp
+.DS_Store
