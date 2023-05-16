@@ -64,15 +64,14 @@ class AboutView(TemplateView):
 # https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}
 
 #Logging Out function from Auth0
-class LogoutView(View):
-    def get(self, request):
-        django_logout(request)
+def logout(request):
+    django_logout(request)
 
-        domain=config('APP_DOMAIN')
-        client_id=config('APP_CLIENT_ID')
-        return_to='https://mateusz97i1wheelsshop.vercel.app/'
+    domain=config('APP_DOMAIN')
+    client_id=config('APP_CLIENT_ID')
+    return_to='https://mateusz97i1wheelsshop.vercel.app/'
 
-        return HttpResponseRedirect(f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}")
+    return HttpResponseRedirect(f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}")
     
 
 #user profile Auth0
