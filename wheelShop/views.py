@@ -70,8 +70,10 @@ def logout(request):
     domain=config('APP_DOMAIN')
     client_id=config('APP_CLIENT_ID')
     return_to='https://mateusz97i1wheelsshop.vercel.app/'
+    logout_url = f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}"
+    response = requests.get(logout_url)
 
-    return HttpResponseRedirect(f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}")
+    return redirect(logout_url)
     
 
 #user profile Auth0
