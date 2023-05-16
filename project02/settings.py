@@ -164,7 +164,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Auth0 redirect links
 LOGIN_URL='/login/auth0'
 LOGIN_REDIRECT_URL='/'
-LOGOUT_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='https://mateusz97i1wheelsshop.vercel.app/'
 
 #stripe settings
 STRIPE_PUBLIC_KEY=config('STRIPE_PUBLIC_KEY')
