@@ -73,7 +73,7 @@ def logout(request):
     logout_url = f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}"
     response = requests.get(logout_url)
 
-    return redirect(logout_url)
+    return redirect(return_to)
     
 
 #user profile Auth0
