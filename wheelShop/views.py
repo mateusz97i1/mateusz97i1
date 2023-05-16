@@ -70,7 +70,7 @@ class LogoutView(View):
 
         domain=config('APP_DOMAIN')
         client_id=config('APP_CLIENT_ID')
-        return_to='http://localhost:8000/'
+        return_to='https://mateusz97i1wheelsshop.vercel.app/'
 
         return HttpResponseRedirect(f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}")
     
