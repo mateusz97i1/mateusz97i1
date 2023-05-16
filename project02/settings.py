@@ -104,10 +104,15 @@ WSGI_APPLICATION = 'project02.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':  'railway',
+        'USER':  'postgres',
+        'PASSWORD':  'Jc3kJHYj2N20z1gptGLs',
+        'HOST':  'containers-us-west-184.railway.app',
+        'PORT':  '7890',
+        
+    }
 }
 
 
