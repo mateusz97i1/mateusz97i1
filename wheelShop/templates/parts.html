@@ -27,7 +27,8 @@
         <p>{{ wheel.name }} {{ wheel.size }}"" </p>
         <p> <em>price</em>  {{ wheel.price }}$</p>
         <p>Only {{ wheel.leftOnStock }} left</p>
-        <form action="{% url 'wheelShop:add_to_cart' wheel.id %}" method="post">
+               {% if wheel.leftOnStock > 0 %}
+            <form action="{% url 'wheelShop:add_to_cart' wheel.id %}" method="post">
           {% csrf_token %}
           <input class="buyBtn" type="submit" value="BUY" >
           <div>
@@ -39,6 +40,9 @@
             </select>
           </div>
         </form>
+        {% else %}
+            <input class="buyBtn" type="submit" value="None" >
+        {% endif %}
         
            
     </div>
