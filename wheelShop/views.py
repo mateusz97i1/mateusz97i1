@@ -134,9 +134,17 @@ def add_to_cart(request, wheel_id):
 
     amount=int(request.POST.get('amount',1)) # Read selected amount or take 1 as the default value
 
-    cart = request.session.get('cart', {})
-    cart[wheel_id] = cart.get(wheel_id, 0) + amount
-    request.session['cart'] = cart
+    cart = request.session.get('cart', {}) #creates the cart in browser session
+
+#gets stock amout and checks if we are able to sell choosen amout
+    if wheel.leftOnStock < amount:
+        amount=wheel.leftOnStock
+        cart[wheel_id] = cart.get(wheel_id, 0) + amount
+        request.session['cart'] = cart
+
+    else:
+        cart[wheel_id] = cart.get(wheel_id, 0) + amount
+        request.session['cart'] = cart
 
     return redirect('wheelShop:shoppingBasket')
 
