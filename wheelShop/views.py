@@ -65,23 +65,13 @@ class AboutView(TemplateView):
 
 #Logging Out function from Auth0
 def logout(request):
-     logout_token = request.session.get('logout_token')
+    django_logout(request)
 
-    if logout_token:
-        # Wywołaj endpoint API Auth0 do wylogowania
-        response = requests.get(
-            f'https://{AUTH0_DOMAIN}/v2/logout',
-            params={'client_id': AUTH0_CLIENT_ID, 'returnTo': 'https://mateusz97i1wheelsshop.vercel.app/'},
-            headers={'Authorization': f'Bearer {logout_token}'}
-        )
 
-        if response.status_code == 200:
-            # Wylogowanie zakończone sukcesem, wyczyść sesję i przekieruj na stronę logowania
-            request.session.flush()
-            return redirect('wheelsShop:main')
-    
-    # W przypadku błędu lub braku tokenu wylogowania, przekieruj na stronę logowania
-    return redirect('wheelsShop:main')
+    client_id=config('APP_CLIENT_ID')
+    return_to='http://localhost:8000/'
+
+    return HttpResponseRedirect(f"https://mateusz97i1wheelsshop.vercel.app/v2/logout?client_id={client_id}&returnTo={return_to}")
     
 
 #user profile Auth0
