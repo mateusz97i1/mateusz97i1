@@ -1,0 +1,126 @@
+.cart-tabl {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 0px;
+  min-height: 50vh;
+}
+.cart-tabl table {
+  margin-top: 0;
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 900px;
+  text-align: center;
+  table-layout: fixed;
+  margin-bottom: 0px;
+}
+.cart-tabl table th {
+  border: solid black 1px;
+  border-collapse: collapse;
+}
+.cart-tabl table th em {
+  font-size: 12px;
+}
+
+.card-title {
+  text-align: center;
+  padding-left: 720px;
+}
+
+.card-clear-all {
+  padding-top: 5px;
+  text-align: center;
+  padding-left: 720px;
+}
+
+.cc-btn {
+  height: 30px;
+  width: 80px;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 30px;
+}
+
+.cc-btn:hover {
+  background-color: rgb(173, 53, 53);
+  border: 1px solid aliceblue;
+  cursor: pointer;
+}
+
+.check {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  padding-top: 10px;
+}
+.check button {
+  margin-left: 723px;
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+.check button:hover {
+  border: solid 1px aliceblue;
+  cursor: pointer;
+  background-color: green;
+}
+
+@media only screen and (max-width: 768px) {
+  .cart-tabl table {
+    width: 350px;
+  }
+  .cart-tabl table th {
+    font-size: 0.8rem;
+  }
+  .card-title {
+    text-align: center;
+    padding-left: 260px;
+  }
+  .card-clear-all {
+    padding-left: 260px;
+  }
+  .check button {
+    margin-left: 260px;
+  }
+  .cc-btn {
+    height: 30px;
+    width: 70px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 30px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .cart-tabl table {
+    width: 350px;
+  }
+  .cart-tabl table th {
+    font-size: 0.8rem;
+  }
+  .card-title {
+    text-align: center;
+    padding-left: 260px;
+  }
+  .card-clear-all {
+    padding-left: 260px;
+  }
+  .check button {
+    margin-left: 260px;
+  }
+  .cc-btn {
+    height: 30px;
+    width: 70px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 30px;
+  }
+}/*# sourceMappingURL=cart.css.map */
