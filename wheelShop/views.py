@@ -67,11 +67,11 @@ class AboutView(TemplateView):
 def logout(request):
     django_logout(request)
 
-
+    domain=config('APP_DOMAIN')
     client_id=config('APP_CLIENT_ID')
     return_to='http://localhost:8000/'
 
-    return HttpResponseRedirect(f"https://mateusz97i1wheelsshop.vercel.app/v2/logout?client_id={client_id}&returnTo={return_to}")
+    return HttpResponseRedirect(f"https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}")
     
 
 #user profile Auth0
