@@ -78,10 +78,10 @@ def logout(request):
         if response.status_code == 200:
             # Wylogowanie zakończone sukcesem, wyczyść sesję i przekieruj na stronę logowania
             request.session.flush()
-            return redirect('nazwa_strony_logowania')
+            return redirect('wheelsShop:main')
     
     # W przypadku błędu lub braku tokenu wylogowania, przekieruj na stronę logowania
-    return redirect('nazwa_strony_logowania')
+    return redirect('wheelsShop:main')
     
 
 #user profile Auth0
