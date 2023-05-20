@@ -1,5 +1,6 @@
 from django.urls import path,include
 from . import views
+from django.contrib.auth.views import LogoutView
 
 app_name='wheelShop'
 
@@ -9,7 +10,7 @@ urlpatterns=[
     path('parts/',views.parts,name='partsy'),
     path('about/',views.AboutView.as_view(),name='abouty'),
     path('', include('social_django.urls', namespace='social')),
-    path('logout/',views.logout,name='logout'),
+    path('logout/', LogoutView.as_view(next_page='wheelShop:main')),
     path('profile/',views.profile,name='profile'),
     path('shopping-basket/',views.shoppingBasket,name='shoppingBasket'),
     path('add-to-cart/<int:wheel_id>/', views.add_to_cart, name='add_to_cart'),
